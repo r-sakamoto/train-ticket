@@ -1,5 +1,7 @@
 version: "3"
 
+
+
 services:
   #  rabbitmq:
   #    image: rabbitmq:management
@@ -91,7 +93,9 @@ services:
       - 11178:11178
     networks:
       - my-network
-
+    env_file:
+      - mysql.env
+          
 #  ts-route-mongo:
 #    image: mongo
 #    networks:
@@ -105,7 +109,8 @@ services:
       - 12347:12347
     networks:
       - my-network
-
+    env_file:
+      - mysql.env
 #  ts-contacts-mongo:
 #    image: mongo
 #    networks:
@@ -119,6 +124,8 @@ services:
       - 12031:12031
     networks:
       - my-network
+    env_file:
+      - mysql.env
 
 #  ts-order-mongo:
 #    image: mongo
@@ -133,6 +140,8 @@ services:
       - 12032:12032
     networks:
       - my-network
+    env_file:
+      - mysql.env
 
 #  ts-order-other-mongo:
 #    image: mongo
@@ -146,8 +155,10 @@ services:
     ports:
       - 15679:15679
     networks:
-      - my-network
-
+      - my-network  
+    env_file:
+      - mysql.env   
+          
 #  ts-config-mongo:
 #    image: mongo
 #    networks:
@@ -161,7 +172,9 @@ services:
       - 12345:12345
     networks:
       - my-network
-
+    env_file:
+      - mysql.env
+      
 #  ts-station-mongo:
 #    image: mongo
 #    networks:
@@ -175,6 +188,8 @@ services:
       - 14567:14567
     networks:
       - my-network
+    env_file:
+      - mysql.env
 
 #  ts-train-mongo:
 #    image: mongo
@@ -189,7 +204,9 @@ services:
       - 12346:12346
     networks:
       - my-network
-
+    env_file:
+      - mysql.env
+        
 #  ts-travel-mongo:
 #    image: mongo
 #    networks:
@@ -203,7 +220,9 @@ services:
         - 16346:16346
       networks:
         - my-network
-
+      env_file:
+        - mysql.env
+          
 #  ts-travel2-mongo:
 #    image: mongo
 #    networks:
@@ -253,7 +272,8 @@ services:
           - 16579:16579
         networks:
           - my-network
-
+        env_file:
+          - mysql.env
 
 #  ts-price-mongo:
 #    image: mongo
@@ -268,6 +288,8 @@ services:
           - 17853:17853
         networks:
           - my-network
+        env_file:
+          - mysql.env
 
   ts-security-service:
         build: ts-security-service
@@ -277,7 +299,9 @@ services:
           - 11188:11188
         networks:
           - my-network
-
+        env_file:
+          - mysql.env
+          
 #  ts-security-mongo:
 #    image: mongo
 #    networks:
@@ -291,7 +315,9 @@ services:
           - 18673:18673
         networks:
           - my-network
-
+        env_file:
+          - mysql.env
+          
 #  ts-inside-payment-mongo:
 #    image: mongo
 #    networks:
@@ -314,6 +340,8 @@ services:
           - 19001:19001
         networks:
           - my-network
+        env_file:
+          - mysql.env
 
 #  ts-payment-mongo:
 #    image: mongo
@@ -351,6 +379,10 @@ services:
           - 18888:18888
         networks:
           - my-network
+        env_file:
+          - mysql.env          
+          
+          
 
 #  ts-assurance-mongo:
 #    image: mongo
@@ -456,6 +488,8 @@ services:
         - 18856:18856
       networks:
         - my-network
+      env_file:
+        - mysql.env
 
   ts-consign-service:
             build: ts-consign-service
@@ -465,6 +499,9 @@ services:
               - 16111:16111
             networks:
               - my-network
+            env_file:
+              - mysql.env   
+
 
 #  ts-consign-mongo:
 #    image: mongo
@@ -479,6 +516,8 @@ services:
               - 16110:16110
             networks:
               - my-network
+            env_file:
+              - mysql.env   
 
 #  ts-consign-price-mongo:
 #    image: mongo
@@ -568,6 +607,8 @@ services:
       - 18808:18808
     networks:
       - my-network
+    env_file:
+      - mysql.env
 
   ts-food-delivery-service:
     build: ts-food-delivery-service
@@ -577,6 +618,8 @@ services:
       - 18957:18957
     networks:
       - my-network
+    env_file:
+      - mysql.env
   
   ts-gateway-service:
     build: ts-gateway-service
@@ -595,7 +638,9 @@ services:
       - 18855:18855
     networks:
       - my-network
-
+    env_file:
+      - mysql.env
+          
   ts-train-food-service:
     build: ts-train-food-service
     image: codewisdom/ts-train-food-service:1.0.0
@@ -604,6 +649,8 @@ services:
       - 19999:19999
     networks:
       - my-network
+    env_file:
+      - mysql.env
 
   ts-wait-order-service:
     build: ts-wait-order-service
@@ -613,7 +660,8 @@ services:
       - 17525:17525
     networks:
       - my-network
-
+    env_file:
+      - mysql.env
 
 networks:
   my-network:
