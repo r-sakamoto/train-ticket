@@ -9,11 +9,13 @@ spring:
   application:
     name: ts-food-service
   datasource:
-    url: jdbc:mysql://${FOOD_MYSQL_HOST:ts-food-mysql}:${FOOD_MYSQL_PORT:3306}/${FOOD_MYSQL_DATABASE:ts-food-mysql}?useSSL=false
+    url: jdbc:mysql://${FOOD_MYSQL_HOST:ts-food-mysql}:${FOOD_MYSQL_PORT:3306}/${FOOD_MYSQL_DATABASE:ts-food-mysql}?allowPublicKeyRetrieval=true&useSSL=false
     username: ${FOOD_MYSQL_USER:root}
     password: ${FOOD_MYSQL_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
   jpa:
+    open-in-view: true
     hibernate:
       ddl-auto: update
     properties:

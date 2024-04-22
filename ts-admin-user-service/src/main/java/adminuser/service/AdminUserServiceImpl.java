@@ -6,7 +6,7 @@ import edu.fudan.common.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
+
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -26,7 +26,7 @@ public class AdminUserServiceImpl implements AdminUserService {
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
-    private DiscoveryClient discoveryClient;
+    
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AdminUserServiceImpl.class);
 //    @Value("${user-service.url}")
