@@ -601,7 +601,7 @@ services:
 
   ts-delivery-service:
     build: ts-delivery-service
-    image: codewisdom/ts-delivery-service:1.0.0
+    image: codewisdom/ts-delivery-service:latest
     restart: always
     ports:
       - 18808:18808
@@ -612,7 +612,7 @@ services:
 
   ts-food-delivery-service:
     build: ts-food-delivery-service
-    image: codewisdom/ts-food-delivery-service:1.0.0
+    image: codewisdom/ts-food-delivery-service:latest
     restart: always
     ports:
       - 18957:18957
@@ -623,16 +623,16 @@ services:
   
   ts-gateway-service:
     build: ts-gateway-service
-    image: codewisdom/ts-gateway-service:1.0.0
+    image: codewisdom/ts-gateway-service:latest
     restart: always
     ports:
-      - 18888:18888
+      - 28888:18888
     networks:
       - my-network
 
   ts-station-food-service:
     build: ts-station-food-service
-    image: codewisdom/ts-station-food-service:1.0.0
+    image: codewisdom/ts-station-food-service:latest
     restart: always
     ports:
       - 18855:18855
@@ -643,7 +643,7 @@ services:
           
   ts-train-food-service:
     build: ts-train-food-service
-    image: codewisdom/ts-train-food-service:1.0.0
+    image: codewisdom/ts-train-food-service:latest
     restart: always
     ports:
       - 19999:19999
@@ -654,7 +654,7 @@ services:
 
   ts-wait-order-service:
     build: ts-wait-order-service
-    image: codewisdom/ts-wait-order-service:1.0.1
+    image: codewisdom/ts-wait-order-service:latest
     restart: always
     ports:
       - 17525:17525
