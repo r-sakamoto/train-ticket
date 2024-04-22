@@ -1,0 +1,183 @@
+version: "3"
+
+services:
+
+  ts-auth-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-user-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-account-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-route-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-contacts-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-order-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-order-other-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-config-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-station-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-train-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-travel-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-travel2-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-price-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-security-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-inside-payment-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-payment-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-rebook-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-assurance-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-ticket-office-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-news-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-voucher-mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - my-network
+
+  ts-food-map-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-consign-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-consign-price-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-food-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+networks:
+  my-network:
+    # driver: overlay
+    driver: bridge
