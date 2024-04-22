@@ -50,10 +50,10 @@ services:
     networks:
       - my-network
 
-  ts-auth-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-auth-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-user-service:
     build: ts-user-service
@@ -64,10 +64,10 @@ services:
     networks:
       - my-network
 
-  ts-user-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-user-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-verification-code-service:
     build: ts-verification-code-service
@@ -78,10 +78,10 @@ services:
     networks:
       - my-network
 
-  ts-account-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-account-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-route-service:
     build: ts-route-service
@@ -92,10 +92,10 @@ services:
     networks:
       - my-network
 
-  ts-route-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-route-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-contacts-service:
     build: ts-contacts-service
@@ -106,10 +106,10 @@ services:
     networks:
       - my-network
 
-  ts-contacts-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-contacts-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-order-service:
     build: ts-order-service
@@ -120,10 +120,10 @@ services:
     networks:
       - my-network
 
-  ts-order-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-order-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-order-other-service:
     build: ts-order-other-service
@@ -134,10 +134,10 @@ services:
     networks:
       - my-network
 
-  ts-order-other-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-order-other-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-config-service:
     build: ts-config-service
@@ -148,10 +148,10 @@ services:
     networks:
       - my-network
 
-  ts-config-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-config-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-station-service:
     build: ts-station-service
@@ -162,10 +162,10 @@ services:
     networks:
       - my-network
 
-  ts-station-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-station-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-train-service:
     build: ts-train-service
@@ -176,10 +176,10 @@ services:
     networks:
       - my-network
 
-  ts-train-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-train-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-travel-service:
     build: ts-travel-service
@@ -190,10 +190,10 @@ services:
     networks:
       - my-network
 
-  ts-travel-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-travel-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-travel2-service:
       build: ts-travel2-service
@@ -204,10 +204,10 @@ services:
       networks:
         - my-network
 
-  ts-travel2-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-travel2-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-preserve-service:
     build: ts-preserve-service
@@ -255,10 +255,10 @@ services:
           - my-network
 
 
-  ts-price-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-price-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-notification-service:
         build: ts-notification-service
@@ -278,10 +278,10 @@ services:
         networks:
           - my-network
 
-  ts-security-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-security-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-inside-payment-service:
         build: ts-inside-payment-service
@@ -292,10 +292,10 @@ services:
         networks:
           - my-network
 
-  ts-inside-payment-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-inside-payment-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-execute-service:
         build: ts-execute-service
@@ -315,10 +315,10 @@ services:
         networks:
           - my-network
 
-  ts-payment-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-payment-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-rebook-service:
         build: ts-rebook-service
@@ -329,10 +329,10 @@ services:
         networks:
           - my-network
 
-  ts-rebook-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-rebook-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-cancel-service:
         build: ts-cancel-service
@@ -352,10 +352,10 @@ services:
         networks:
           - my-network
 
-  ts-assurance-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-assurance-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-seat-service:
         build: ts-seat-service
@@ -384,10 +384,10 @@ services:
         networks:
           - my-network
 
-  ts-ticket-office-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-ticket-office-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-news-service:
     build: ts-news-service
@@ -398,10 +398,10 @@ services:
     networks:
       - my-network
 
-  ts-news-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-news-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-voucher-mysql:
     image: mysql
@@ -434,10 +434,10 @@ services:
         networks:
           - my-network
 
-  ts-food-map-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-food-map-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-route-plan-service:
           build: ts-route-plan-service
@@ -466,10 +466,10 @@ services:
             networks:
               - my-network
 
-  ts-consign-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-consign-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-consign-price-service:
             build: ts-consign-price-service
@@ -480,15 +480,15 @@ services:
             networks:
               - my-network
 
-  ts-consign-price-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-consign-price-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
-  ts-food-mongo:
-    image: mongo
-    networks:
-      - my-network
+#  ts-food-mongo:
+#    image: mongo
+#    networks:
+#      - my-network
 
   ts-admin-basic-info-service:
         build: ts-admin-basic-info-service
