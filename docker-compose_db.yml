@@ -177,6 +177,42 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
 
+  ts-station-food-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-train-food-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-delivery-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-wait-order-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  ts-food-delivery-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+
 networks:
   my-network:
     # driver: overlay
