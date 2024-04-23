@@ -5,4 +5,5 @@ docker build ts-ui-dashboard -t codewisdom/ts-ui-dashboard:latest
 docker build ts-news-service -t codewisdom/ts-news-service:latest
 make build
 
+#echo 200000 > /proc/sys/fs/aio-max-nr
 #IMG_REPO=codewisdom IMG_TAG=latest NAMESPACE='codewisdom' TAG='latest' docker-compose up
