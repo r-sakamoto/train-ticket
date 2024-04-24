@@ -30,3 +30,4 @@ docker exec -it train-ticket-ts-train-food-mysql-1 mysql -proot -e 'CREATE DATAB
 docker exec -it train-ticket-ts-delivery-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-delivery-mysql`;'
 docker exec -it train-ticket-ts-wait-order-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-wait-order-mysql`;'
 docker exec -it train-ticket-ts-food-delivery-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-food-delivery-mysql`;'
+docker exec -it train-ticket-ts-notification-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-notification-mysql`;'

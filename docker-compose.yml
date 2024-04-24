@@ -3,13 +3,13 @@ version: "3"
 
 
 services:
-  #  rabbitmq:
-  #    image: rabbitmq:management
-  #    ports:
-  #      - 5672:5672
-  #      - 15672:15672
-  #    networks:
-  #      - my-network
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - my-network
 
   # kafka:
   #   container_name: kafka
@@ -397,7 +397,9 @@ services:
           - 18898:18898
         networks:
           - my-network
-
+        env_file:
+          - mysql.env          
+ 
   ts-travel-plan-service:
         build: ts-travel-plan-service
         image: ${IMG_REPO}/ts-travel-plan-service:${IMG_TAG}
@@ -406,16 +408,21 @@ services:
           - 14322:14322
         networks:
           - my-network
-
+        env_file:
+          - mysql.env          
+ 
   ts-ticket-office-service:
         build: ts-ticket-office-service
-        image: ${IMG_REPO}/ts-ticket-office-service:${IMG_TAG}
+          #image: ${IMG_REPO}/ts-ticket-office-service:${IMG_TAG}
+        image: codewisdom/ts-ticket-office-service:latest
         restart: always
         ports:
           - 16108:16108
         networks:
           - my-network
-
+        env_file:
+          - mysql.env          
+ 
 #  ts-ticket-office-mongo:
 #    image: mongo
 #    networks:
@@ -429,7 +436,9 @@ services:
       - 12862:12862
     networks:
       - my-network
-
+    env_file:
+      - mysql.env          
+ 
 #  ts-news-mongo:
 #    image: mongo
 #    networks:
@@ -456,7 +465,9 @@ services:
           #  - /var/lib/mysql
           networks:
             - my-network
-
+          env_file:
+            - mysql.env          
+ 
 #  ts-food-map-service:
 #        build: ts-food-map-service
 #        image: ${IMG_REPO}/ts-food-map-service:${IMG_TAG}
@@ -479,7 +490,9 @@ services:
             - 14578:14578
           networks:
             - my-network
-
+          env_file:
+            - mysql.env          
+ 
   ts-food-service:
       build: ts-food-service
       image: ${IMG_REPO}/ts-food-service:${IMG_TAG}
@@ -537,7 +550,9 @@ services:
           - 18767:18767
         networks:
           - my-network
-
+        env_file:
+          - mysql.env          
+ 
   ts-admin-order-service:
             build: ts-admin-order-service
             image: ${IMG_REPO}/ts-admin-order-service:${IMG_TAG}
@@ -546,7 +561,9 @@ services:
               - 16112:16112
             networks:
               - my-network
-
+            env_file:
+              - mysql.env          
+ 
   ts-admin-route-service:
               build: ts-admin-route-service
               image: ${IMG_REPO}/ts-admin-route-service:${IMG_TAG}
@@ -559,7 +576,9 @@ services:
                   condition: on-failure
               networks:
                 - my-network
-
+              env_file:
+                - mysql.env          
+ 
   ts-admin-travel-service:
                 build: ts-admin-travel-service
                 image: ${IMG_REPO}/ts-admin-travel-service:${IMG_TAG}
@@ -572,7 +591,9 @@ services:
                     condition: on-failure
                 networks:
                   - my-network
-
+                env_file:
+                  - mysql.env          
+ 
   ts-admin-user-service:
     build: ts-admin-user-service
     image: ${IMG_REPO}/ts-admin-user-service:${IMG_TAG}
@@ -585,7 +606,9 @@ services:
         condition: on-failure
     networks:
       - my-network
-
+    env_file:
+      - mysql.env          
+ 
   ts-avatar-service:
     image: ${NAMESPACE}/ts-avatar-service:${TAG}
     restart: always
@@ -593,7 +616,9 @@ services:
       - 17001:17001
     networks:
       - my-network
-
+    env_file:
+      - mysql.env          
+ 
 
 
 
@@ -609,7 +634,7 @@ services:
       - my-network
     env_file:
       - mysql.env
-
+ 
   ts-food-delivery-service:
     build: ts-food-delivery-service
     image: codewisdom/ts-food-delivery-service:latest
@@ -629,7 +654,9 @@ services:
       - 28888:18888
     networks:
       - my-network
-
+    env_file:
+      - mysql.env
+ 
   ts-station-food-service:
     build: ts-station-food-service
     image: codewisdom/ts-station-food-service:latest

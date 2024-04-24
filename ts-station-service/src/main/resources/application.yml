@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://${STATION_MYSQL_HOST:ts-station-mysql}:${STATION_MYSQL_PORT:3306}/${STATION_MYSQL_DATABASE:ts-station-mysql}?allowPublicKeyRetrieval=true&useSSL=false
     username: ${STATION_MYSQL_USER:root}
-    password: ${STATION_MYSQL_PASSWORD:Abcd1234#}
+    password: ${STATION_MYSQL_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

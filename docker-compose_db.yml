@@ -212,6 +212,15 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
 
+  ts-notification-mysql:
+    image: mysql
+    networks:
+      - my-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+
+
 
 networks:
   my-network:
