@@ -8,6 +8,7 @@ docker exec -it train-ticket-ts-contacts-mysql-1 mysql -proot -e 'CREATE DATABAS
 docker exec -it train-ticket-ts-order-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-order-mysql`;'
 docker exec -it train-ticket-ts-order-other-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-order-other-mysql`;'
 docker exec -it train-ticket-ts-config-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-config-mysql`;'
+docker exec -it train-ticket-ts-config-mysql-1 mysql -proot -e 'SET GLOBAL default_storage_engine = InnoDB;'
 docker exec -it train-ticket-ts-station-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-station-mysql`;'
 docker exec -it train-ticket-ts-train-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-train-mysql`;'
 docker exec -it train-ticket-ts-travel-mysql-1 mysql -proot -e 'CREATE DATABASE `ts-travel-mysql`;'
