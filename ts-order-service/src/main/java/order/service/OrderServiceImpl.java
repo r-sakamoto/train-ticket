@@ -37,9 +37,6 @@ public class OrderServiceImpl implements OrderService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderServiceImpl.class);
 
-    @Autowired
-    
-
     private String getServiceUrl(String serviceName) {
         return "http://" + serviceName; }
 

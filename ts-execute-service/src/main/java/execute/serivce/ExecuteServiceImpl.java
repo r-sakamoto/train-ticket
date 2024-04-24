@@ -26,8 +26,6 @@ public class ExecuteServiceImpl implements ExecuteService {
 
     @Autowired
     private RestTemplate restTemplate;
-    @Autowired
-    
 
     String orderStatusWrong = "Order Status Wrong";
 

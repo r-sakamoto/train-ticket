@@ -35,9 +35,6 @@ public class OrderOtherServiceImpl implements OrderOtherService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderOtherServiceImpl.class);
 
-    @Autowired
-    
-
     private String getServiceUrl(String serviceName) {
         return "http://" + serviceName;
     }

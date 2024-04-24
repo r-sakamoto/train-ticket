@@ -33,9 +33,6 @@ public class FoodDeliveryServiceImpl implements FoodDeliveryService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
-    
-
     private String getServiceUrl(String serviceName) {
         return "http://" + serviceName;
     }
